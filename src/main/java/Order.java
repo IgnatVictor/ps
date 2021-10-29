@@ -3,13 +3,13 @@ import java.time.LocalDateTime;
 
 public class Order {
 
-    private String description;
-    private String gtin;
-    private LocalDateTime created;
-    private int orderId;
-    private Float price;
-    private String supplier;
-    private String currency;
+    private final String description;
+    private final String gtin;
+    private final LocalDateTime created;
+    private final int orderId;
+    private final Float price;
+    private final String supplier;
+    private final String currency;
 
 
     public Order(String description, String gtin, LocalDateTime created, int orderId, Float price, String supplier, String currency) {

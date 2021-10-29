@@ -8,9 +8,8 @@ public class TimeConverter {
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS");
 
     public LocalDateTime convertTime(String time) {
-        String time1 = time.replace("T", " ");
-        localDateTime = LocalDateTime.parse(time1, formatter);
+        String timeReplace = time.replace("T", " ");
+        localDateTime = LocalDateTime.parse(timeReplace, formatter);
         return localDateTime;
-
     }
 }

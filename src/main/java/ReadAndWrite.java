@@ -4,7 +4,7 @@ import java.util.List;
 public class ReadAndWrite {
 
     ReadXml readXml = new ReadXml();
-    OutputXml outputXml = new OutputXml();
+    WriteXml outputXml = new WriteXml();
     DirectoryList directoryList = new DirectoryList();
 
     public void readAndWrite(String inputLocation, String outputLocation) {
@@ -12,7 +12,8 @@ public class ReadAndWrite {
 
         for (String file : files) {
             String[] filePart = file.split("s", 2);
-            outputXml.writeToXml(readXml.read(inputLocation, file), filePart[1], outputLocation);
+            String orderNumber = filePart[1];
+            outputXml.writeToXml(readXml.read(inputLocation, file), orderNumber, outputLocation);
         }
     }
 }

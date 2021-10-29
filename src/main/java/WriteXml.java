@@ -13,7 +13,7 @@ import javax.xml.transform.stream.StreamResult;
 import java.io.File;
 import java.util.List;
 
-public class OutputXml {
+public class WriteXml {
 
     public void writeToXml(List<Company> companies, String name, String outputLocation) {
 

@@ -9,19 +9,19 @@ public class ServiceFilter {
     public List<Company> companyList(List<Company> companies) {
         List<Order> orders = new ArrayList<>();
 
-        for (int i = 0; i < companies.size(); i++) {
-            orders.add(companies.get(i).getOrders().get(0));
+        for (Company value : companies) {
+            orders.add(value.getOrders().get(0));
         }
 
         for (Order order : orders) {
-            if (!companiesResult.stream().anyMatch(o -> o.getName().equals(order.getSupplier()))) {
+            if (companiesResult.stream().noneMatch(o -> o.getName().equals(order.getSupplier()))) {
                 Company company = new Company(order.getSupplier());
                 company.addOrder(order);
                 companiesResult.add(company);
             } else {
-                for (int i = 0; i < companiesResult.size(); i++) {
-                    if (companiesResult.get(i).getName().equals(order.getSupplier())) {
-                        companiesResult.get(i).addOrder(order);
+                for (Company company : companiesResult) {
+                    if (company.getName().equals(order.getSupplier())) {
+                        company.addOrder(order);
                     }
                 }
             }

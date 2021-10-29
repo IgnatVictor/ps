@@ -4,7 +4,7 @@ import java.util.List;
 public class Company {
 
     List<Order> orders;
-    private String name;
+    private final String name;
 
     public Company(String name) {
         this.name = name;

@@ -24,10 +24,10 @@ public class DirectoryList {
         for (String file : result) {
             String[] finalFile = file.split("s", 2);
 
-            if (finalFile[0].equals("order")) {
+            if ("order".equals(finalFile[0])) {
                 String[] finalFile2 = finalFile[1].split("\\.", 2);
 
-                if (isInt(finalFile2[0]) && finalFile2[1].equals("xml")) {
+                if (isInt(finalFile2[0]) && "xml".equals(finalFile2[1])) {
                     finalList.add(file);
                 } else {
                     System.out.println("file " + file + " has a bad name!");
