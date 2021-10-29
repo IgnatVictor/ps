@@ -4,7 +4,7 @@ Xml read and write , automatic .
 
 The main class will let u establish the input and output folders . Copy xml files that u need to parse into the input folder then run the program. If files had an inccorect name it will be listed in the terminal console. 
 
-As an adition library u have it in the project, lib folder, it's Dom Parser , which you will have to import as external library.
+As an adition library u have it in the project, lib folder, it's Dom Parser , which you will have to import as an external library.
 
 ==============================================
 
