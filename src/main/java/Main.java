@@ -6,7 +6,7 @@ public class Main {
         String INPUT_LOCATION = "/home/victor/Desktop/pss/input1/";
         String OUTPUT_LOCATION = "/home/victor/Desktop/pss/output1/";
 
-        ReadAndWrite readAndWrite = new ReadAndWrite();
+        AutomaticReadAndWrite readAndWrite = new AutomaticReadAndWrite();
         readAndWrite.readAndWrite(INPUT_LOCATION,OUTPUT_LOCATION);
 
     }

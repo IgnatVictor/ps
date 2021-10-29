@@ -1,7 +1,7 @@
 import java.util.List;
 
 
-public class ReadAndWrite {
+public class AutomaticReadAndWrite {
 
     ReadXml readXml = new ReadXml();
     WriteXml outputXml = new WriteXml();
